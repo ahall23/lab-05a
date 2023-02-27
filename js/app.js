@@ -15,12 +15,12 @@ function sum(a, b) {
   console.log("The sum of ${4} and ${7} is ${11}.");
 }
 
-Here is the test for sum(); uncomment it to run it
- testSum(4, 7);
+//Here is the test for sum(); uncomment it to run it
+//testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
-/////////////////////////////////////
+/////////////////////////////////////git
 /* Problem 2
 Write a function called multiply() that takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
@@ -30,6 +30,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
+  let product = a * b;
+  return [product, "The product of ${a} and ${b} is ${sum}."];
+
+  console.log("The product of ${5} and ${9} is ${45}.");
   //eslint-disable-line
 }
 
@@ -51,6 +55,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+  let sum = sum(a, b)[0];
+  let sum2 = sum(sum, c)[0];
+
+  let product = multiply(a, b)[0];
+  let product2 = mulitply(product, c)[0];
+
+  var str3A = a + "and" + b + "and" + c + "sum to" + sum2 + ".";
+  var str3B =
+    "The product of" + a + "and" + b + "and" + c + "is" + product2 + ".";
+  var arr3 = [];
+  arr3[0] = sum2;
+  arr3[1] = product2;
+  arr3[2] = str3A;
+  arr3[3] = str3B;
+  return arr3;
   //eslint-disable-line
 }
 
@@ -73,6 +92,7 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
+    let sum3 = ()
   //eslint-disable-line
 }
 
