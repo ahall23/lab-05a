@@ -55,21 +55,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  let sum = sum(a, b)[0];
-  let sum2 = sum(sum, c)[0];
-
-  let product = multiply(a, b)[0];
-  let product2 = mulitply(product, c)[0];
-
-  var str3A = a + "and" + b + "and" + c + "sum to" + sum2 + ".";
-  var str3B =
-    "The product of" + a + "and" + b + "and" + c + "is" + product2 + ".";
-  var arr3 = [];
-  arr3[0] = sum2;
-  arr3[1] = product2;
-  arr3[2] = str3A;
-  arr3[3] = str3B;
-  return arr3;
+  
   //eslint-disable-line
 }
 
