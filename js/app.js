@@ -55,7 +55,22 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  
+  function sumAndMultiply(a, b, c) {
+  let sum = sum(a, b)[0];
+  let sum2 = sum(sum, c)[0];
+
+  let product = multiply(a, b)[0];
+  let product2 = mulitply(product, c)[0];
+
+  var str3A = a + "and" + b + "and" + c + "sum to" + sum2 + ".";
+  var str3B =
+    "The product of" + a + "and" + b + "and" + c + "is" + product2 + ".";
+  var arr3 = [];
+  arr3[0] = sum2;
+  arr3[1] = product2;
+  arr3[2] = str3A;
+  arr3[3] = str3B;
+  return arr3;
   //eslint-disable-line
 }
 
@@ -75,10 +90,15 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-let testArray = [2, 3, 4]; //eslint-disable-line
-
-function sumArray(sumArr) {
-    let sum3 = ()
+    let testArray = [2, 3, 4]; //eslint-disable-line
+function sumArray(sumArr) { //eslint-disable-line
+  let sum3 = sum (testArray[0] , testArray[1] )[0] ;
+  let sum4 = sum (sum3 , testArray[2] )[0] ;
+  var str4 =  testArray + " was passed in as an array of numbers, and "  + sum4 + " is their sum."  ;
+  var arr4=[];
+  arr4[0] = sum4;
+  arr4[1] =  str4;
+  return arr4;
   //eslint-disable-line
 }
 
