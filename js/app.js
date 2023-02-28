@@ -10,13 +10,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) {
   let sum = a + b;
-  return [sum, "The sum of ${a} and ${b} is ${sum}."];
+  console.log(`The sum of ${a} and ${b} is ${sum}.`);
+  return [sum, `The sum of ${a} and ${b} is ${sum}.`];
 
-  console.log("The sum of ${4} and ${7} is ${11}.");
+  //console.log("The sum of ${4} and ${7} is ${11}.");
 }
 
 //Here is the test for sum(); uncomment it to run it
-//testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -31,14 +32,16 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
   let product = a * b;
-  return [product, "The product of ${a} and ${b} is ${sum}."];
+  console.log(`The product of ${a} and ${b} is ${product}.`);
 
-  console.log("The product of ${5} and ${9} is ${45}.");
+  return [product, `The product of ${a} and ${b} is ${product}.`];
+
+  //console.log("The product of ${5} and ${9} is ${45}.");
   //eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -61,20 +64,20 @@ function sumAndMultiply(a, b, c) {
   let product = multiply(a, b)[0];
   let product2 = mulitply(product, c)[0];
 
-  var str3A = a + "and" + b + "and" + c + "sum to" + sum2 + ".";
-  var str3B =
-    "The product of" + a + "and" + b + "and" + c + "is" + product2 + ".";
-  var arr3 = [];
-  arr3[0] = sum2;
-  arr3[1] = product2;
-  arr3[2] = str3A;
-  arr3[3] = str3B;
+  let str3A = a + " and " + b + " and " + c + " sum to " + sum2 + ".";
+  let str3B =
+    "The product of " + a + " and " + b + " and " + c + " is " + product2 + ".";
+  let arr3 = [str3A, str3B];
+  // arr3[0] = sum2;
+  // arr3[1] = product2;
+  // arr3[2] = str3A;
+  // arr3[3] = str3B;
   return arr3;
   //eslint-disable-line
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -108,7 +111,7 @@ function sumArray(sumArr) {
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -137,7 +140,7 @@ function multiplyArray(multArr) {
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
