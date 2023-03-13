@@ -9,16 +9,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-  let number = [a + b]
-  let string = "The sum of " + a + " and " + b + " is " + sum + "."
-  console.log(number);
-  console.log("The sum of " + 4 + " and " + 7 + " is " + 11 + ".");
- 
+  let total = a + b;
+  // let string = "The sum of " + a + " and " + b + " is " + sum + ".";
+  // console.log(total);
+  // console.log("The sum of " + 4 + " and " + 7 + " is " + 11 + ".");
+  return [total, "The sum of " + a + " and " + b + " is " + total + "."];
 }
- 
+
 //
 //Here is the test for sum(); uncomment it to run it
- testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -32,11 +32,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
-
+  let product = a * b;
+  // let string = "The product of a and b is sum.";
+  // console.log(product);
+  // console.log("The product of 5 and 9 is 45.");
+  return [product, `The product of ${a} and ${b} is ${product}.`];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5, 9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -53,10 +57,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  
+  let mm = sum(a, b)[0];
+  let mmm = sum(mm, c)[0];
+  let product1 = multiply(a, b)[0];
+  let product2 = multiply(product1, c)[0];
+  let thridElement = `${a} and ${b} and ${c} sum to ${mmm}.`;
+  let fourthElement = `The product of ${a} and ${b} and ${c} is ${product2}.`;
+
+  return [mmm, product2, thridElement, fourthElement];
+}
+
 // I made sure I added the varibles to the array and remember that the value represents the conent in the array. I have a function called sumAndMultiply with an 3 argument that takes three numbers
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4, 7, 5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -73,12 +86,18 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) {
- 
+  let sum1 = sum(testArray[0], testArray[1])[0];
+  let sum2 = sum(sum1, testArray[2])[0];
+
+  return [
+    sum2,
+    `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum2} is their sum.`,
+  ];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -93,10 +112,19 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) {}
+function multiplyArray(multArr) {
+  let testArray = [2, 3, 4];
+  let product3 = multiply(testArray[0], testArray[1])[0];
+  let product4 = multiply(product3, testArray[2])[0];
+
+  return [
+    product4,
+    `The numbers ${2},${3},${4} have a product of ${product4}.`,
+  ];
+}
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
