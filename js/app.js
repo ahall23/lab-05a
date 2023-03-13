@@ -9,13 +9,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-  let sum = a + b;
-  console.log(`The sum of ${a} and ${b} is ${sum}.`);
-  return [sum, `The sum of ${a} and ${b} is ${sum}.`];
-
-  //console.log("The sum of ${4} and ${7} is ${11}.");
+  let total = a + b;
+  // let string = "The sum of " + a + " and " + b + " is " + sum + ".";
+  // console.log(total);
+  // console.log("The sum of " + 4 + " and " + 7 + " is " + 11 + ".");
+  return [total, "The sum of " + a + " and " + b + " is " + total + "."];
 }
 
+//
 //Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 
@@ -32,12 +33,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
   let product = a * b;
-  console.log(`The product of ${a} and ${b} is ${product}.`);
-
+  // let string = "The product of a and b is sum.";
+  // console.log(product);
+  // console.log("The product of 5 and 9 is 45.");
   return [product, `The product of ${a} and ${b} is ${product}.`];
-
-  //console.log("The product of ${5} and ${9} is ${45}.");
-  //eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -58,24 +57,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  let summ = sum(a, b)[0];
-  let sum2 = sum(summ, c)[0];
+  let mm = sum(a, b)[0];
+  let mmm = sum(mm, c)[0];
+  let product1 = multiply(a, b)[0];
+  let product2 = multiply(product1, c)[0];
+  let thridElement = `${a} and ${b} and ${c} sum to ${mmm}.`;
+  let fourthElement = `The product of ${a} and ${b} and ${c} is ${product2}.`;
 
-  let product = multiply(a, b)[0];
-  let product2 = multiply(product, c)[0];
-
-  let str3A = a + " and " + b + " and " + c + " sum to " + sum2 + ".";
-  let str3B =
-    "The product of " + a + " and " + b + " and " + c + " is " + product2 + ".";
-  let arr3 = [];
-  arr3[0] = sum2;
-  arr3[1] = product2;
-  arr3[2] = str3A;
-  arr3[3] = str3B;
-  return arr3;
-  //eslint-disable-line
+  return [mmm, product2, thridElement, fourthElement];
 }
 
+// I made sure I added the varibles to the array and remember that the value represents the conent in the array. I have a function called sumAndMultiply with an 3 argument that takes three numbers
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4, 7, 5);
 
@@ -94,19 +86,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) {
-  //eslint-disable-line
-  let sum3 = sum(testArray[0], testArray[1])[0];
-  let sum4 = sum(sum3, testArray[2])[0];
-  let str4 =
-    testArray +
-    " was passed in as an array of numbers, and " +
-    sum4 +
-    " is their sum.";
-  var arr4 = [];
-  arr4[0] = sum4;
-  arr4[1] = str4;
-  return arr4;
-  //eslint-disable-line
+  let sum1 = sum(testArray[0], testArray[1])[0];
+  let sum2 = sum(sum1, testArray[2])[0];
+
+  return [
+    sum2,
+    `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum2} is their sum.`,
+  ];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -128,15 +114,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) {
   let testArray = [2, 3, 4];
-  let product5 = multiply(testArray[0], testArray[1])[0];
-  let product6 = multiply(product5, testArray[2])[0];
-  let str5 =
-    "The numbers " + testArray + " have a product of " + product6 + ".";
-  let arr5b = [];
-  arr5b[0] = product6;
-  arr5b[1] = str5;
-  return arr5b;
-  //eslint-disable-line
+  let product3 = multiply(testArray[0], testArray[1])[0];
+  let product4 = multiply(product3, testArray[2])[0];
+
+  return [
+    product4,
+    `The numbers ${2},${3},${4} have a product of ${product4}.`,
+  ];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
